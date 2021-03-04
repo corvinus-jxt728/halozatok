@@ -12,7 +12,7 @@ body {
 #footer,
 #header,
 #nav {
-    padding: 20px;
+    padding: 40px;
 }
 
 #header {
@@ -24,7 +24,7 @@ body {
 }
 
 #article {
-    text-align: left;
+    text-align: right;
     background: gold;
 }
 
@@ -44,7 +44,7 @@ body {
     #nav a {
         /* ugyanaz, mint flex-grow:1; flex-shrink:1;flex-basis:auto;*/
         flex: 1 1 auto;
-        text-decoration: none;
+        text-decoration: wavy;
         color: black;
     }
 
@@ -52,14 +52,14 @@ body {
 @media screen and (min-width: 800px) {
     body {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         max-width: 1500px;
         margin: auto;
     }
 
     #main {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
     }
 
     #nav,

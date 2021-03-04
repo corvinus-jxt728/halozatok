@@ -5,7 +5,8 @@
 body {
     font-weight: bold;
     text-align: center;
-    color : azure;
+    color : black;
+    font-size: larger;
 }
 
 #article,

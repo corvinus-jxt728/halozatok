@@ -5,6 +5,7 @@
 body {
     font-weight: bold;
     text-align: center;
+    color : azure;
 }
 
 #article,
@@ -52,14 +53,14 @@ body {
 @media screen and (min-width: 800px) {
     body {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         max-width: 1500px;
         margin: auto;
     }
 
     #main {
         display: flex;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
     }
 
     #nav,

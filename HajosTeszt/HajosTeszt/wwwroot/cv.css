@@ -19,7 +19,7 @@ a {
 
     a:hover {
         /* vegyük észre, hogy örökli a tulajdonságokat a szülőtől, egyet közülük felülírunk*/
-        background-color: fuchsia;
+        background-color: lightgoldenrodyellow;
     }
 
 span {

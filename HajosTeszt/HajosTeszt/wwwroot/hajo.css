@@ -1,10 +1,12 @@
 ﻿html, body {
     height: 100%;
+    
+    font-size: larger;
 }
 
 div {
-    margin: 10px;
-    border: 1px solid fuchsia
+     margin: 10px; 
+   /* border: 1px solid fuchsia */
 }
 
 #külső {
@@ -14,6 +16,7 @@ div {
 }
 
 #kérdés_szöveg {
+    font-size: larger;
 }
 
 #középső {
@@ -45,9 +48,20 @@ div {
 }
 
 .kerdes {
+    
 }
 
 .kattintható:hover {
-    background-color: fuchsia;
+    background-color: blue;
+    color: white;
+}
+
+.jó:hover {
+    background-color: green;
+    color: white;
+}
+
+.rossz:hover {
+    background-color: red;
     color: white;
 }

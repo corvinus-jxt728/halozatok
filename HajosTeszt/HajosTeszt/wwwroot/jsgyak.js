@@ -17,7 +17,7 @@ function Pascal() {
             $("#Pascal").text("A triangle needs at least 2 rows!");
         }
         else {
-            $("#Pascal").html(prevArr + "<br>" + curArr[0] + " " + curArr[1]);
+            $jsgyak.html(prevArr + "<br>" + curArr[0] + " " + curArr[1]);
         }
     }
 }

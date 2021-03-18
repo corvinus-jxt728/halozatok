@@ -1,0 +1,33 @@
+#Pascal {
+    margin: 5px;
+    background-color: yellow;
+}
+
+
+.row {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+h1, p {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#inputs {
+    width: 200px;
+    margin: 0 45%;
+}
+
+input {
+    position: relative;
+    width: 70px;
+    margin: 0 5px;
+    text-align: right;
+    background-color: grey;
+    color: white;
+}
+
+html, body {
+    background-color: silver;
+}

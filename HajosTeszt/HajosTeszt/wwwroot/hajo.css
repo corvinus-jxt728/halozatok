@@ -38,14 +38,14 @@ div {
     justify-content: space-between;
 }
 
-#kep {
+#kép {
     overflow: hidden;
     flex-shrink:0;
-    flex-shrink: 0;
-    max-width: 150%;
+    max-width: 100%;
 }
 .rejtett{
     display: none;
+    width: 0px;
 }
 .gomb {
     padding: 20px;

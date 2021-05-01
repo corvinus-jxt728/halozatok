@@ -18,10 +18,11 @@ function kerdesBetoltes(id) {
                 console.error(`Hibás válasz: ${response.status}`)
             }
             else {
-                kerdesMegjelenites(response.json())
+                return response.json()
             }
         })
-}  
+        .then(data => kerdesMegjelenites(data));
+}     
 function kerdesMegjelenites(kerdes) {
     if (!kerdes) return; //Ha undefined a kerdes objektum, nincs mit tenni
     console.log(kerdes);

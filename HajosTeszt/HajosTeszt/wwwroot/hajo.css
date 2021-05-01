@@ -17,7 +17,7 @@ div {
     flex-direction: column;
 }
 
-#kérdés_szöveg {
+#kerdes_szoveg {
     font-size: larger;
 }
 
@@ -27,7 +27,7 @@ div {
     flex-grow: 1;
 }
 
-#válaszok {
+#valaszok {
     flex-grow: 1;
     flex-shrink: 1;
 }
@@ -38,13 +38,15 @@ div {
     justify-content: space-between;
 }
 
-#kép {
+#kep {
     overflow: hidden;
     flex-shrink:0;
     flex-shrink: 0;
     max-width: 150%;
 }
-
+.rejtett{
+    display: none;
+}
 .gomb {
     padding: 20px;
     width: 80px;
@@ -54,12 +56,12 @@ div {
     
 }
 
-.kattintható:hover {
+.kattinthato:hover {
     background-color: blue;
     color: white;
 }
 
-.jó:hover {
+.jo:hover {
     background-color: green;
     color: white;
 }
@@ -89,7 +91,7 @@ div {
         margin: 0px;
         border: 2px solid gray;
     }
-    #kép {
+    #kep {
         overflow: hidden;
         flex-shrink: 1;
         

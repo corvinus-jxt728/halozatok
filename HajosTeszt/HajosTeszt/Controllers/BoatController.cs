@@ -1,4 +1,5 @@
-﻿using HajosTeszt.Models;
+﻿using HajosTeszt.gondolatModels;
+using HajosTeszt.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -21,6 +22,22 @@ namespace HajosTeszt.Controllers
 
             return new JsonResult(kerdesek);
         }
+        [Route("api/leker")]
+        public ActionResult M10()
+        {
+            bonuszContext context = new bonuszContext();
+            var k = from x in context.Gondolas select x.Gondolat;
+
+            return new JsonResult(k);
+        }
+        [Route("api/mennyi")]
+        public int M11()
+        {
+            bonuszContext context = new bonuszContext();
+            int Száma = context.Gondolas.Count();
+
+            return Száma;
+        }
         [Route("questions/{sorszam}")]
         public ActionResult M2(int sorszam)
         {
@@ -41,6 +58,7 @@ namespace HajosTeszt.Controllers
 
             return kérdésekSzáma;
         }
+        
     }
 }
  

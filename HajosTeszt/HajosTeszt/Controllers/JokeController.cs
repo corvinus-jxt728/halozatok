@@ -13,12 +13,12 @@ namespace HajosTeszt.Controllers
     {
         // GET: api/<JokeController>
         [HttpGet]
-        public IEnumerable<string> Get()
+     /*   public IEnumerable<string> Get()
         {
             FunnyDatabaseContext context = new FunnyDatabaseContext();
-            return context.Jokes.ToList();
+           // return context.Jokes.ToList();
         }
-
+     */
         // GET api/<JokeController>/5
         [HttpGet("{id}")]
         public string Get(int id)
@@ -27,14 +27,14 @@ namespace HajosTeszt.Controllers
         }
         // GET api/jokes/5
         [HttpGet("{id}")]
-        public Joke Get(int id)
+       /* public Joke Get(int id)
         {
             FunnyDatabaseContext context = new FunnyDatabaseContext();
             var keresettVicc = (from x in context.Jokes
                                 where x.JokeSk == id
                                 select x).FirstOrDefault();
             return keresettVicc;
-        }
+        }  
         // POST api/jokes
         [HttpPost]
         public void Post([FromBody] Joke újVicc)
@@ -42,7 +42,7 @@ namespace HajosTeszt.Controllers
             FunnyDatabaseContext context = new FunnyDatabaseContext();
             context.Jokes.Add(újVicc);
             context.SaveChanges();
-        }
+        } */
         // POST api/<JokeController>
         [HttpPost]
         public void Post([FromBody] string value)
@@ -54,7 +54,7 @@ namespace HajosTeszt.Controllers
         public void Put(int id, [FromBody] string value)
         {
         }
-
+        /*
         // DELETE api/jokes/5
         [HttpDelete("{id}")]
         public void Delete(int id)
@@ -65,7 +65,7 @@ namespace HajosTeszt.Controllers
                                 select x).FirstOrDefault();
             context.Remove(törlendőVicc);
             context.SaveChanges();
-        }
+        } */
     }
 
     internal class FunnyDatabaseContext

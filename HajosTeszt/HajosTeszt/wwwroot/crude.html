@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Made by: JXT728</title>
+</head>
+<body>
+    <center>
+        <form>
+            <div id="tList"></div>
+            <div>
+                <p><a>Figyelem: pár percet várni kell az első lekérdezés után, ameddig "felébred" az Azure kiszolgáló. Így az első input elveszhet, utána az adatbázis működik.</a></p>
+                <p><h3>_______________________________________________________________</h3></p>
+                <p><h3>Új gondolat felvitele</h3></p>
+                <p>
+                    <a>Mire gondol éppen?</a>
+                    <input id="kText" type="text" placeholder="pl. Szép idő van" />
+                </p>
+            </div>
+            <button id="addButton">Új gondolat mentése</button>
+            <p><h3>_______________________________________________________________</h3></p>
+
+
+        </form>
+    </center>
+    <p>
+        <a>Funkciók:</a>
+        <ol>|API|   Kiírás kulcs alapján (@/api/bonusz/[kulcs(=int)]</ol>
+        <ol>|API|   Összes adat kiírása (@/api/leker</ol>
+        <ol>|API|   Adatok számának kiírása (az üres gondolatokkal együtt) (@/api/mennyi</ol>
+        <ol>|API|   Törlés kulcs alapján. Külső programmal elérhető szolgáltatás, kulcs alapján törlés (=int).</ol>
+        <ol>|API|   Új rekord felvitele API-val. Külső programmal elérhető szolgáltatás, automatikus kulcsgenerálással.</ol>
+        <ol>Webes füleleten adatrögzítés. Elérhető fentebb.</ol>
+
+    </p>
+    <script>
+        document.getElementById("addButton").addEventListener("click", () => {
+
+            //Ezt az objektumot fogjuk átküldeni
+            let data = {
+                gondolat: document.getElementById("kText").value
+
+            }
+
+
+            fetch("api/bonusz",
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }
+            ).then(x => {
+                if (x.ok) {
+                    alert("Gondolat elmentve:)");
+
+                }
+                else {
+                    alert("Sikertelen művelet:/");
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
